@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 🌈 */
+.rainbow{height: 180px;overflow: hidden;}
+.rainbow div{overflow: hidden;}
+.rainbow > div{
+    border: 3px solid hsl(0, 37%, 76%) ;
+    width: 400px;height: 400px;
+    background:hsl(0, 90%, 50%);border-radius: 50%;
+}
+.rainbow > div >div{
+    
+   margin: 10px;height: 380px;
+    background:hsl(45, 61%, 51%);border-radius: 50%;
+}
+.rainbow > div >div >div{
+  border-radius: 50%;
+   margin: 10px;height: 360px;
+    background:hsl(60, 50%, 54%);}
+ .rainbow > div >div >div >div{
+        border-radius: 50%;
+       margin: 10px;height: 340px;
+        background:hsl(120, 50%, 50%);}
+        .rainbow > div >div >div >div >div{
+           border-radius: 50%;
+           margin: 10px;height: 320px;
+            background:hsl(180, 50%, 50%);}
+            .rainbow > div >div >div >div >div>div{
+            border-radius: 50%;
+               margin: 10px;height: 300px;
+                background: hsl(240 ,80%, 50%);}
+                .rainbow > div >div>div >div >div >div>div{
+                  border-radius: 50%;
+                   margin: 10px;height: 280px;
+                    background:hsl(300,50%, 50%);}
+                   .rainbow > div >div>div>div >div >div >div>div{
+                        border-radius: 50%;
+                       margin: 10px;height: 280px;
+                        background:white;}
+    
+/* 小飞机 */
+#plane{
+    color: #000;
+    font-size: 50px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradientBG {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #59C173,#7f91e0,#7d64b8,#2a75ff);
+    background-size: 500% 500%;
+    animation: gradientBG 30s ease infinite;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* 动画，控制背景 background-position */
+  @keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+  }
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+.headImg {
+    width: 200px;
+    height: 200px;
+    border: solid 5px #fff;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgb(185, 185, 185);
+    background-size: contain;
+    animation: rotate360 30s linear infinite;
+    margin: 0 auto;
+    margin-top: 1vh;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center;
+    font-size: 50px;
+}    
+.tupian {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items:center;
+
+}
+/* 移动端适配 */
+@media (max-width:600px) {
+    .box{
+    font-size: 25px;
+    }
+    #plane{
+        display: none;
+    }
+    .headImg{
+        width: 300px;
+        height: 300px;
+    }
+    .rainbow{height: 180px;width: 105vw;overflow: hidden;}
+.rainbow div{overflow: hidden;}
